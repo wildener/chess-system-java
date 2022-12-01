@@ -188,11 +188,8 @@ public class ChessMatch {
 				if (p.getColor() == Color.WHITE)
 					pawnPosition = new Position(3, target.getColumn());
 				else
-					pawnPosition = new Position(4, target.getColumn());
-				
-				capturedPiece = (ChessPiece)board.removePiece(pawnPosition);
-				capturedPieces.add(capturedPiece);
-				piecesOnTheBoard.remove(capturedPiece);
+					pawnPosition = new Position(4, target.getColumn());				
+				board.placePiece(pawn, pawnPosition);
 			}
 		}
 	}
